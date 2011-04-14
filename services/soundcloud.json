@@ -1,0 +1,34 @@
+{
+"base_url": "http://api.soundcloud.com/",
+"version":"0.1",
+"methods":{
+  "users":{
+    "required_params":["consumer_key"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/users:format",
+    "method":"GET"
+  },
+  "user_tracks":{
+    "required_params":["consumer_key", "user_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/users/:user_id/tracks:format",
+    "method":"GET"
+  },
+  "user_comments":{
+    "required_params":["consumer_key", "user_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/users/:user_id/comments:format",
+    "method":"GET"
+  },
+  "me_tracks":{
+    "required_params":["consumer_key"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/me/tracks:format",
+    "method":"GET"
+  }
+}
+}
