@@ -1,0 +1,18 @@
+{
+"base_url": "http://api.flickr.com/services/rest/",
+"version":"0.1",
+"methods":{
+  "panda_getList":{
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/",
+    "method":"GET"
+  },
+  "auth_url":{
+    "required_params":["perms"],
+    "expected_status":["200"],
+    "path":"/",
+    "method":"GET"
+  }
+  }
+}

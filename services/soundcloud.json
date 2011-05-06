@@ -2,32 +2,137 @@
 "base_url": "http://api.soundcloud.com/",
 "version":"0.1",
 "methods":{
+  "user":{
+    "required_params":["consumer_key", "user_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/users/:user_id",
+    "method":"GET"
+  },
+  "set_user":{
+    "required_params":["consumer_key", "user_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/users/:user_id",
+    "method":"POST"
+  },
   "users":{
     "required_params":["consumer_key"],
     "optional_params":["format"],
     "expected_status":["200"],
-    "path":"/users:format",
+    "path":"/users",
     "method":"GET"
   },
   "user_tracks":{
     "required_params":["consumer_key", "user_id"],
     "optional_params":["format"],
     "expected_status":["200"],
-    "path":"/users/:user_id/tracks:format",
+    "path":"/users/:user_id/tracks",
+    "method":"GET"
+  },
+  "user_followings":{
+    "required_params":["consumer_key", "user_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/users/:user_id/followings",
+    "method":"GET"
+  },
+  "user_followings_contact":{
+    "required_params":["consumer_key", "user_id", "contact_id"],
+    "optional_params":["format"],
+    "expected_status":["303"],
+    "path":"/users/:user_id/followings/:contact_id",
+    "method":"GET"
+  },
+  "user_followings_contact_add":{
+    "required_params":["consumer_key", "user_id", "contact_id"],
+    "optional_params":["format"],
+    "expected_status":["201", "200"],
+    "path":"/users/:user_id/followings/:contact_id",
+    "method":"PUT"
+  },
+  "user_followings_contact_del":{
+    "required_params":["consumer_key", "user_id", "contact_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/users/:user_id/followings/:contact_id",
+    "method":"DELETE"
+  },
+  "user_followers":{
+    "required_params":["consumer_key", "user_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/users/:user_id/followers",
+    "method":"GET"
+  },
+  "user_followers_contact":{
+    "required_params":["consumer_key", "user_id", "contact_id"],
+    "optional_params":["format"],
+    "expected_status":["303"],
+    "path":"/users/:user_id/followers/:contact_id",
     "method":"GET"
   },
   "user_comments":{
     "required_params":["consumer_key", "user_id"],
     "optional_params":["format"],
     "expected_status":["200"],
-    "path":"/users/:user_id/comments:format",
+    "path":"/users/:user_id/comments",
+    "method":"GET"
+  },
+  "user_favorites":{
+    "required_params":["consumer_key", "user_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/users/:user_id/favorites",
+    "method":"GET"
+  },
+  "user_favorites_track":{
+    "required_params":["consumer_key", "user_id", "track_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/users/:user_id/favorites/:track_id",
+    "method":"GET"
+  },
+  "user_favorites_track_add":{
+    "required_params":["consumer_key", "user_id", "track_id"],
+    "optional_params":["format"],
+    "expected_status":["201", "200"],
+    "path":"/users/:user_id/favorites/:track_id",
+    "method":"PUT"
+  },
+  "user_favorites_track_del":{
+    "required_params":["consumer_key", "user_id", "track_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/users/:user_id/favorites/:track_id",
+    "method":"DELETE"
+  },
+  "user_groups":{
+    "required_params":["consumer_key", "user_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/users/:user_id/groups",
+    "method":"GET"
+  },
+  "user_playlists":{
+    "required_params":["consumer_key", "user_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/users/:user_id/playlists",
+    "method":"GET"
+  },
+  "me":{
+    "required_params":["consumer_key"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/me",
     "method":"GET"
   },
   "me_tracks":{
     "required_params":["consumer_key"],
     "optional_params":["format"],
     "expected_status":["200"],
-    "path":"/me/tracks:format",
+    "path":"/me/tracks",
     "method":"GET"
   }
 }
