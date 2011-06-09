@@ -59,60 +59,186 @@
         "path":"/db/data/node/:node",
         "method":"DELETE"
       },
-      "create_rel":{
+      "create_relationship":{
         "required_params":["node"],
         "expected_status":["201","400","404"],
         "path":"/db/data/node/:node/relationships",
         "method":"POST"
       },
-      "set_rel_properties":{
+      "set_relationship_properties":{
         "required_params":["relationship"],
         "expected_status":["204","400","404"],
         "path":"/db/data/relationship/:relationship/properties",
         "method":"PUT"
       },
-      "get_rel_properties":{
+      "get_relationship_properties":{
         "required_params":["relationship"],
         "expected_status":["200","204","404"],
         "path":"/db/data/relationship/:relationship/properties",
         "method":"GET"
       },
-      "remove_rel_properties":{
+      "remove_relationship_properties":{
         "required_params":["relationship"],
         "expected_status":["204","404"],
         "path":"/db/data/relationship/:relationship/properties",
         "method":"DELETE"
       },
-      "set_rel_property":{
+      "set_relationship_property":{
         "required_params":["relationship","property"],
         "expected_status":["204","400","404"],
         "path":"/db/data/relationship/:relationship/:property",
         "method":"PUT"
       },
-     "get_rel_property":{
+     "get_relationship_property":{
         "required_params":["relationship","property"],
         "expected_status":["200","404"],
         "path":"/db/data/relationship/:relationship/:property",
         "method":"GET"
       },
-     "remove_rel_property":{
+     "remove_relationship_property":{
         "required_params":["relationship","property"],
         "expected_status":["204","404"],
         "path":"/db/data/relationship/:relationship/:property",
         "method":"DELETE"
       },
-     "delete_rel":{
+     "delete_relationship":{
         "required_params":["relationship"],
         "expected_status":["204","404"],
         "path":"/db/data/relationship/:relationship",
         "method":"DELETE"
       },
-      "get_rels_node":{
+      "get_relationships":{
         "required_params":["node","dir"],
         "optional_params":["types"],
         "expected_status":["200","404"],
         "path":"/db/data/node/:node/relationships/:dir/:types",
         "method":"GET"
+      },
+      "get_all_relationship_types":{
+        "expected_status":["200"],
+        "path":"/db/data/relationships/types",
+        "method":"GET"
+      },
+      "node_indexes":{
+        "expected_status":["200"],
+        "path":"/db/data/index/node",
+        "method":"GET"
+      },
+      "create_node_index":{
+        "expected_status":["201"],
+        "path":"/db/data/index/node",
+        "method":"POST"
+      },
+      "create_relationship_index":{
+        "expected_status":["201"],
+        "path":"/db/data/index/relationship",
+        "method":"POST"
+      },
+      "get_all_relationship_indexes":{
+        "expected_status":["200"],
+        "path":"/db/data/index/relationship",
+        "method":"GET"
+      },
+      "add_node_to_index":{
+        "expected_status":["201"],
+        "required_params":["property","value"],
+        "path":"/db/data/index/node/my_nodes/:property/:value",
+        "method":"POST"
+      },
+      "delete_node_from_index":{
+        "expected_status":["204","404"],
+        "required_params":["node"],
+        "optional_params":["property","value"],
+        "path":"/db/data/index/node/my_nodes/:property/:value/:node",
+        "method":"DELETE"
+      },
+      "delete_node_from_my_index":{
+        "expected_status":["204","404"],
+        "required_params":["index","node"],
+        "optional_params":["property","value"],
+        "path":"/db/data/index/node/:index/:property/:value/:node",
+        "method":"DELETE"
+      },
+      "add_relationship_to_index":{
+        "expected_status":["201"],
+        "required_params":["property","value"],
+        "path":"/db/data/index/relationship/my_relationships/:property/:value",
+        "method":"POST"
+      },   
+      "delete_relationship_from_index":{
+        "expected_status":["204","404"],
+        "required_params":["relationship"],
+        "optional_params":["property","value"],
+        "path":"/db/data/index/node/my_relationships/:property/:value/:relationship",
+        "method":"DELETE"
+      },
+      "add_relationship_to_my_index":{
+        "expected_status":["201"],
+        "required_params":["index","property","value"],
+        "path":"/db/data/index/relationship/:index/:property/:value",
+        "method":"POST"
+      },
+      "delete_relationship_from_my_index":{
+        "expected_status":["204","404"],
+        "required_params":["relationship","index"],
+        "optional_params":["property","value"],
+        "path":"/db/data/index/relationship/:index/:property/:value/:relationship",
+        "method":"DELETE"
+      },
+      "node_search_index":{
+        "expected_status":["200"],
+        "required_params":["property","value"],
+        "path":"/db/data/index/node/my_nodes/:property/:value",
+        "method":"GET"
+      },
+      "relationship_search_index":{
+        "expected_status":["200"],
+        "required_params":["property","value"],
+        "path":"/db/data/index/node/my_rels/:property/:value",
+        "method":"GET"
+      },
+      "node_query_index":{
+        "expected_status":["200"],
+		"required_params":["query"],
+        "path":"/db/data/index/node/my_nodes",
+        "method":"GET"
+      },
+      "node_query_my_index":{
+        "expected_status":["200"],
+		"required_params":["index","query"],
+        "path":"/db/data/index/node/:index",
+        "method":"GET"
+      },
+      "relationship_query_index":{
+        "expected_status":["200"],
+		"required_params":["query"],
+        "path":"/db/data/index/relationship/my_relationships",
+        "method":"GET"
+      },
+      "relationship_query_my_index":{
+        "expected_status":["200"],
+		"required_params":["index","query"],
+        "path":"/db/data/index/relationship/:index",
+        "method":"GET"
+      },
+      "traverse":{
+        "required_params":["node"],
+        "optional_params":["returntype"],
+        "expected_status":["200","404"],
+        "path":"/db/data/node/:node/traverse/:returntype",
+        "method":"POST"
+      },
+      "find_path":{
+        "required_params":["node"],
+        "expected_status":["200","404"],
+        "path":"/db/data/node/:node/path",
+        "method":"POST"
+      },
+      "find_paths":{
+        "required_params":["node"],
+        "expected_status":["200","404"],
+        "path":"/db/data/node/:node/paths",
+        "method":"POST"
       }
   }
 }
