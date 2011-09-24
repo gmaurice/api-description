@@ -134,6 +134,405 @@
     "expected_status":["200"],
     "path":"/me/tracks",
     "method":"GET"
+  },
+  "track":{
+    "required_params":["consumer_key", "track_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/tracks/:track_id",
+    "method":"GET"
+  },
+  "put_track":{
+    "required_params":["consumer_key", "track_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/tracks/:track_id",
+    "method":"PUT"
+  },
+  "del_track":{
+    "required_params":["consumer_key", "track_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/tracks/:track_id",
+    "method":"DELETE"
+  },
+  "track_comments":{
+    "required_params":["consumer_key", "track_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/tracks/:track_id/comments",
+    "method":"GET"
+  },
+  "track_comment":{
+    "required_params":["consumer_key", "track_id", "comment_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/tracks/:track_id/comments/:comment_id",
+    "method":"GET"
+  },
+  "put_track_comment":{
+    "required_params":["consumer_key", "track_id", "comment_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/tracks/:track_id/comments/:comment_id",
+    "method":"PUT"
+  },
+  "del_track_comment":{
+    "required_params":["consumer_key", "track_id", "comment_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/tracks/:track_id/comments/:comment_id",
+    "method":"DELETE"
+  },
+  "track_favoriters":{
+    "required_params":["consumer_key", "track_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/tracks/:track_id/favoriters",
+    "method":"GET"
+  },
+  "track_favoriter":{
+    "required_params":["consumer_key", "track_id", "user_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/tracks/:track_id/favoriters/:user_id",
+    "method":"GET"
+  },
+  "shared_to_users":{
+    "required_params":["consumer_key", "track_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/tracks/:track_id/shared-to/users",
+    "method":"GET"
+  },
+  "post_shared_to_users":{
+    "required_params":["consumer_key", "track_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/tracks/:track_id/shared-to/users",
+    "method":"POST"
+  },
+  "put_shared_to_users":{
+    "required_params":["consumer_key", "track_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/tracks/:track_id/shared-to/users",
+    "method":"PUT"
+  },
+  "del_shared_to_users":{
+    "required_params":["consumer_key", "track_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/tracks/:track_id/shared-to/users",
+    "method":"DELETE"
+  },
+  "shared_to_emails":{
+    "required_params":["consumer_key", "track_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/tracks/:track_id/shared-to/emails",
+    "method":"GET"
+  },
+  "post_shared_to_emails":{
+    "required_params":["consumer_key", "track_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/tracks/:track_id/shared-to/email",
+    "method":"POST"
+  },
+  "put_shared_to_emails":{
+    "required_params":["consumer_key", "track_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/tracks/:track_id/shared-to/emails",
+    "method":"PUT"
+  },
+  "del_shared_to_emails":{
+    "required_params":["consumer_key", "track_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/tracks/:track_id/shared-to/emails",
+    "method":"DELETE"
+  },
+  "track_secret_token":{
+    "required_params":["consumer_key", "track_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/tracks/:track_id/secret-token",
+    "method":"GET"
+  },
+  "put_track_secret_token":{
+    "required_params":["consumer_key", "track_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/tracks/:track_id/secret-token",
+    "method":"PUT"
+  },
+  "playlist_users":{
+    "required_params":["consumer_key", "playlist_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/playlists/:playlist_id/shared-to/users",
+    "method":"GET"
+  },
+  "post_playlist_users":{
+    "required_params":["consumer_key", "playlist_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/playlists/:playlist_id/shared-to/users",
+    "method":"POST"
+  },
+  "put_playlist_users":{
+    "required_params":["consumer_key", "playlist_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/playlists/:playlist_id/shared-to/users",
+    "method":"PUT"
+  }, 
+  "del_playlist_users":{
+    "required_params":["consumer_key", "playlist_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/tracks/:playlist_id/shared-to/users",
+    "method":"DELETE"
+  },
+  "group":{
+    "required_params":["consumer_key", "group_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/groups/:group_id",
+    "method":"GET"
+  },
+  "group_moderators":{
+    "required_params":["consumer_key", "group_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/groups/:group_id/moderators",
+    "method":"GET"
+  },
+  "group_members":{
+    "required_params":["consumer_key", "group_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/groups/:group_id/members",
+    "method":"GET"
+  },
+  "group_contributors":{
+    "required_params":["consumer_key", "group_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/groups/:group_id/contributors",
+    "method":"GET"
+  },
+  "group_tracks":{
+    "required_params":["consumer_key", "group_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/groups/:group_id/tracks",
+    "method":"GET"
+  },
+  "group_pending_tracks":{
+    "required_params":["consumer_key", "group_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/groups/:group_id/pending_tracks",
+    "method":"GET"
+  },
+  "group_pending_track":{
+    "required_params":["consumer_key", "group_id", "track_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/groups/:group_id/pending_tracks/:track_id",
+    "method":"GET"
+  },
+  "put_group_pending_track":{
+    "required_params":["consumer_key", "group_id", "track_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/groups/:group_id/pending_tracks/:track_id",
+    "method":"PUT"
+  },
+  "del_group_pending_track":{
+    "required_params":["consumer_key", "group_id", "track_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/groups/:group_id/pending_tracks/:track_id",
+    "method":"DELETE"
+  },
+  "group_contributions":{
+    "required_params":["consumer_key", "group_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/groups/:group_id/contributions",
+    "method":"GET"
+  },
+  "group_contribution":{
+    "required_params":["consumer_key", "group_id", "contribution_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/groups/:group_id/contributions/:contribution_id",
+    "method":"GET"
+  },
+  "put_group_contribution":{
+    "required_params":["consumer_key", "group_id", "contribution_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/groups/:group_id/contributions/:contribution_id",
+    "method":"PUT"
+  },
+  "del_group_contribution":{
+    "required_params":["consumer_key", "group_id", "contribution_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/groups/:group_id/contributions/:contribution_id",
+    "method":"DELETE"
+  },
+  "comment":{
+    "required_params":["consumer_key", "comment_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/comments/:comment_id",
+    "method":"GET"
+  },
+  "me":{
+    "required_params":["consumer_key"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/me",
+    "method":"GET"
+  },
+  "my_tracks":{
+    "required_params":["consumer_key"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/me/tracks",
+    "method":"GET"
+  },
+  "my_playlists":{
+    "required_params":["consumer_key"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/me/playlists",
+    "method":"GET"
+  },
+  "my_followings":{
+    "required_params":["consumer_key"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/me/followings",
+    "method":"GET"
+  },
+  "put_my_following":{
+    "required_params":["consumer_key", "user_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/me/followings/:user_id",
+    "method":"PUT"
+  },
+  "del_my_following":{
+    "required_params":["consumer_key", "user_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/me/followings/:user_id",
+    "method":"DELETE"
+  },
+  "my_followers":{
+    "required_params":["consumer_key"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/me/followers",
+    "method":"GET"
+  },
+  "my_follower":{
+    "required_params":["consumer_key", "user_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/me/follower/;user_id",
+    "method":"GET"
+  },
+  "my_comments":{
+    "required_params":["consumer_key"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/me/comments",
+    "method":"GET"
+  },
+  "my_favorites":{
+    "required_params":["consumer_key"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/me/favorites",
+    "method":"GET"
+  },
+  "my_favorite":{
+    "required_params":["consumer_key", "favorite_id],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/me/favorites/:favorite_id",
+    "method":"GET"
+  },
+  "put_my_favorite":{
+    "required_params":["consumer_key", "favorite_id],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/me/favorites/:favorite_id",
+    "method":"PUT"
+  },
+  "del_my_favorite":{
+    "required_params":["consumer_key", "favorite_id],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/me/favorites/:favorite_id",
+    "method":"DELETE"
+  },
+  "my_groups":{
+    "required_params":["consumer_key"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/me/groups",
+    "method":"GET"
+  },
+  "my_activities":{
+    "required_params":["consumer_key"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/me/groups",
+    "method":"GET"
+  },
+  "my_connections":{
+    "required_params":["consumer_key"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/me/connections",
+    "method":"GET"
+  },
+  "post_my_connections":{
+    "required_params":["consumer_key"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/me/connections",
+    "method":"POST"
+  },
+  "app":{
+    "required_params":["consumer_key", "app_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/apps/:app_id",
+    "method":"GET"
+  },
+  "app_tracks":{
+    "required_params":["consumer_key", "app_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/apps/:app_id/tracks",
+    "method":"GET"
+  },
+  "resolve":{
+    "required_params":["consumer_key", "url"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/resolve",
+    "method":"GET"
   }
 }
 }
