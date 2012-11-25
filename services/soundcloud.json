@@ -121,6 +121,13 @@
     "path":"/users/:user_id/playlists",
     "method":"GET"
   },
+  "tracks":{
+    "required_params":["client_id"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/tracks",
+    "method":"GET"
+  },
   "track":{
     "required_params":["client_id", "track_id"],
     "optional_params":["format"],
