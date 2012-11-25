@@ -526,6 +526,13 @@
     "expected_status":["200"],
     "path":"/resolve",
     "method":"GET"
+  },
+  "oauth2_token":{
+    "required_params":["client_id", "client_secret", "grant_type", "redirect_uri", "code" ],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/oauth2",
+    "method":"POST"
   }
 }
 }
